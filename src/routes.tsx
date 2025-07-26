@@ -4,7 +4,9 @@ import React, { lazy, Suspense } from 'react';
 
 // Lazy components
 const App = lazy(() => import('./App'));
-const Product = lazy(() => import('./product'));
+// Import the product component lazily. The file name is capitalized
+// to match the component definition.
+const Product = lazy(() => import('./Product'));
 
 // Loader
 const productLoader = async ({ params }: LoaderFunctionArgs) => {
